@@ -1,0 +1,58 @@
+package member;
+
+import java.util.List;
+import java.util.Vector;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class MemberList extends JFrame {
+	// 필드
+	DefaultTableModel model;
+	JTable 			  jt;
+	JScrollPane       pane;
+	JPanel			  pbtn;
+	JButton			  btnInsert;
+	
+	// 제목이름들
+//	String [] colNames = {"아이디", "암호", "이름", "전화번호" };
+	Vector<String> colNames; 
+	
+	
+	// 생성자
+	public MemberList() {
+		super("회원목록");
+		
+		colNames = getColumnNames();
+		
+		model = new DefaultTableModel(colNames, 10);
+		
+		jt    = new JTable(model);
+		pane  = new JScrollPane(jt);
+		this.add(pane);
+		
+		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.setSize(500, 300);
+		this.setVisible(true);
+	}
+	
+	private Vector<String> getColumnNames() {
+		Vector<String> colNames = new Vector<String>(); // GUI는 쓰레드를 사용해서 vectorList를 사용한다
+		colNames.add("아이디");
+		colNames.add("암호");
+		colNames.add("이름");
+		colNames.add("전화번호");
+		return colNames;
+	}
+
+	// 메소드
+	public static void main(String[] args) {
+		new MemberList();
+
+	}
+
+}

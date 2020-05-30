@@ -1,0 +1,48 @@
+package ex06;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class TestMain {
+	
+	private static String driver    = "oracle.jdbc.OracleDriver";
+	private static String url       = "jdbc:oracle:thin:@localhost:1521:xe";
+	private static String userid    = "hrd202";
+	private static String userpw    = "oracle";
+
+	public static void main(String[] args) {
+		addStudent("민성","010-1234-4321");
+	}
+
+	private static void addStudent(String string, String string2) {
+		Connection conn = null;
+		Statement  stmt = null;
+//		ResultSet  rs   = null; 조회하는 결과를 보여주는 것이 아니라면 ResultSet은 사용하지 않음
+
+		try {
+			Class.forName(driver);
+			conn       = DriverManager.getConnection(url, userid, userpw);
+			stmt       = conn.createStatement();
+			String sql = "";
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+//				if(rs != null ) rs.close();
+				if(stmt != null ) stmt.close();
+				if(conn != null ) conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+
+}

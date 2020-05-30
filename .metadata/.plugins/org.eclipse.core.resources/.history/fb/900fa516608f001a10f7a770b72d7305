@@ -1,0 +1,20 @@
+package member;
+
+public class MemberVO {
+	String userId;
+	String userPwd;
+	String username;
+	int birthYear;
+	
+	
+	public MemberVO(String userId, String userPwd, String username, int birthYear) {
+		super();
+		this.userId = userId;
+		this.userPwd = userPwd;
+		this.username = username;
+		this.birthYear = birthYear;
+	}
+	
+	
+	
+}

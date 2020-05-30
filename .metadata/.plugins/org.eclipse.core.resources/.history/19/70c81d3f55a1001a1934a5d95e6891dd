@@ -1,0 +1,28 @@
+package ex05;
+
+// stnum, stname, totscore, avgscore, grade, rnk
+public class StudentScore {
+	private int    stnum;
+	private String stname;
+	private String totscore;
+	private String avgscore;
+	private String   grade;
+	private int    rank;
+	
+	public StudentScore() {};
+	public StudentScore(int stnum, String stname, String totscore, String avgscore, String grade, int rank) {
+		this.stnum = stnum;
+		this.stname = stname;
+		this.totscore = totscore;
+		this.avgscore = avgscore;
+		this.grade = grade;
+		this.rank = rank;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "StudentScore [stnum=" + stnum + ", stname=" + stname + ", totscore=" + totscore + ", avgscore="
+				+ avgscore + ", grade=" + grade + ", rank=" + rank + "]";
+	}
+}

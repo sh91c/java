@@ -1,0 +1,9 @@
+package member;
+
+public class MemberVO {
+	String userId;
+	String userPwd;
+	String username;
+	int birthYear;
+	
+}
