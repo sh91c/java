@@ -8,6 +8,7 @@
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
+			<item value="getMember"/>
 			<item value="강남구"/>
 			<item value="br.readLine()"/>
 			<item value="산수리"/>
@@ -15,7 +16,6 @@
 			<item value="롯데백화점"/>
 			<item value="롯데백화점일산점"/>
 			<item value="age"/>
-			<item value="sum"/>
 		</list>
 		<list key="replacehistory">
 		</list>
